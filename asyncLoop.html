@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input id="button0" type="button" value="button0">
+    <input id="button1" type="button" value="button1">
+    <input id="button2" type="button" value="button2">
+    <input id="button3" type="button" value="button3">
+    <script>
+      var arr = ["0", "1", "2", "3"];
+      for (var i = 0; i < arr.length; i++) {
+        (function(i){
+          document.getElementById("button"+i).addEventListener("click", function(){
+            alert("Button " + i);
+          });
+        })(i)
+      }
+    </script>
+  </body>
+</html>
